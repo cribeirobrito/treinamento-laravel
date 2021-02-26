@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class infracoesController extends Controller
+class InfracoesController extends Controller
 {
-    public function listarInfracoes(){
-        $infracoes = array(
+    public function index(Request $request){
+
+              $infracoes = array(
             [
                 'tipo' => 'Internet',
                 'tipo_produto' => 'Formulas Infantis'      
@@ -19,10 +20,7 @@ class infracoesController extends Controller
 
         );
 
-    $html = "<ul>";
-    foreach ($infracoes as $key => $infracao) {
-        $html .= "<li>" .$infracao['tipo']. "</li>";
-    }
-    $html .= "</ul>";
-    return $html;}
+    
+    return view('infracoes.index', ['infracoes' => $infracoes]);
+}
 }

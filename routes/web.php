@@ -20,4 +20,4 @@ Route::get('/ola-mundo', function () {
 });
 
 
-Route::get('/infracoes', 'infracoesController@listarInfracoes');
+Route::get('/infracoes', 'InfracoesController@index');
