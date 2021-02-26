@@ -20,7 +20,10 @@ class InfracoesController extends Controller
 
         );
 
-    
+        
     return view('infracoes.index', ['infracoes' => $infracoes]);
 }
+    public function create(){
+        return view('infracoes.create');
+    }
 }
